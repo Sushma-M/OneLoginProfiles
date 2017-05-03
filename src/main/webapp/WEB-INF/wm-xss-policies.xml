@@ -168,8 +168,8 @@
         <tag name="tt" action="validate"/>
         <tag name="truncate" action="truncate"/>
         <tag name="p" action="validate"/>
-        <tag name="em" action="validate"/>
         <tag name="ol" action="validate"/>
+        <tag name="em" action="validate"/>
         <tag name="filter" action="filter"/>
     </tag-rules>
     <css-rules/>

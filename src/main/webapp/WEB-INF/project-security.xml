@@ -74,7 +74,7 @@
         <security:intercept-url pattern="/services/security/ssologin" access="isAuthenticated()"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
         <security:intercept-url pattern="/services/servicedefs" access="permitAll"/>
-        <security:intercept-url pattern="/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/**" access="permitAll" method="OPTIONS"/>
         <security:intercept-url pattern="/" access="isAuthenticated()"/>
         <security:intercept-url pattern="/**" access="isAuthenticated()"/>
         <security:headers disabled="true"/>
@@ -189,9 +189,7 @@
         <property name="parameter" value="${general.tokenService.parameter}"/>
         <property name="tokenValiditySeconds" value="${general.tokenService.tokenValiditySeconds}"/>
     </bean>
-    <bean class="org.springframework.security.saml.SAMLAuthenticationProvider" id="samlAuthenticationProvider">
-        <property name="userDetails" ref="wmSAMLDatabaseUserDetailsService"/>
-    </bean>
+    <bean class="org.springframework.security.saml.SAMLAuthenticationProvider" id="samlAuthenticationProvider"/>
     <bean class="org.springframework.security.web.FilterChainProxy" id="samlFilter">
         <security:filter-chain-map request-matcher="ant">
             <security:filter-chain pattern="/saml/metadata/**" filters="metadataDisplayFilter"/>
@@ -313,21 +311,5 @@
                 <entry key="http://apache.org/xml/features/dom/defer-node-expansion" value="false"/>
             </map>
         </property>
-    </bean>
-    <bean class="com.wavemaker.runtime.security.provider.database.authorities.DefaultAuthoritiesProviderImpl" id="samlAuthoritiesProvider">
-        <property name="hibernateTemplate">
-            <ref bean="hrdbTemplate"/>
-        </property>
-        <property name="transactionManager">
-            <ref bean="hrdbTransactionManager"/>
-        </property>
-        <property name="rolesByQuery" value="true"/>
-        <property name="hql" value="false"/>
-        <property name="authoritiesByUsernameQuery">
-            <value>SELECT ROLE FROM USER WHERE USERNAME = :LOGGED_IN_USERNAME</value>
-        </property>
-    </bean>
-    <bean class="com.wavemaker.runtime.security.provider.saml.WMSAMLDatabaseUserDetailsService" id="wmSAMLDatabaseUserDetailsService">
-        <property name="authoritiesProvider" ref="samlAuthoritiesProvider"/>
     </bean>
 </beans>

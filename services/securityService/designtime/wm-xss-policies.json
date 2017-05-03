@@ -33,10 +33,10 @@
     "name" : "p",
     "action" : "VALIDATE"
   }, {
-    "name" : "ol",
+    "name" : "em",
     "action" : "VALIDATE"
   }, {
-    "name" : "em",
+    "name" : "ol",
     "action" : "VALIDATE"
   }, {
     "name" : "filter",
