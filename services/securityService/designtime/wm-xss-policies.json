@@ -1,0 +1,46 @@
+{
+  "tagRules" : [ {
+    "name" : "ul",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "remove",
+    "action" : "REMOVE"
+  }, {
+    "name" : "a",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "div",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "blockquote",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "validate",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "i",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "li",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "tt",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "truncate",
+    "action" : "TRUNCATE"
+  }, {
+    "name" : "p",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "ol",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "em",
+    "action" : "VALIDATE"
+  }, {
+    "name" : "filter",
+    "action" : "FILTER"
+  } ],
+  "unknownTagAction" : "REMOVE"
+}

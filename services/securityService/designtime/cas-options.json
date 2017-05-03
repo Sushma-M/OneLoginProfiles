@@ -1,0 +1,22 @@
+{
+  "serverUrl" : "https://corridor.pramati.com/cas",
+  "loginUrl" : "https://corridor.pramati.com/cas/login",
+  "validationUrl" : "https://corridor.pramati.com/cas",
+  "logoutUrl" : "https://corridor.pramati.com/cas/logout",
+  "serviceParameter" : "service",
+  "artifactParameter" : "ticket",
+  "roleMappingEnabled" : true,
+  "roleMappingConfig" : {
+    "modelName" : "hrdb",
+    "entityName" : "User",
+    "tableName" : "USER",
+    "usernameField" : "username",
+    "usernameColumn" : "USERNAME",
+    "useRolesQuery" : true,
+    "roleField" : null,
+    "roleColumn" : null,
+    "queryType" : "HQL",
+    "roleQuery" : "from User"
+  },
+  "attributes" : [ "uid", "mail", "lastname", "Lastpwdchange", "firstname", "telephonenumber", "alternatemail", "baselocation", "joiningdate", "jobtitle", "title", "employeenumber", "postaladdress", "cn", "homepostaladdress", "defaultpwd", "worklocation", "birthdate" ]
+}

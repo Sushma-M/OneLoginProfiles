@@ -1,0 +1,26 @@
+{
+  "idpMetadataSource" : "URL",
+  "idpMetadataUrl" : "https://app.onelogin.com/saml/metadata/608801",
+  "idpEndpointUrl" : "https://wmtest.onelogin.com/trust/saml2/http-redirect/sso/608801",
+  "idpPublicKey" : "MIIEETCCAvmgAwIBAgIUIsYlk7AEEOplU/KSTrQAaCVWabIwDQYJKoZIhvcNAQEFBQAwVjELMAkGA1UEBhMCVVMxDzANBgNVBAoMBndtdGVzdDEVMBMGA1UECwwMT25lTG9naW4gSWRQMR8wHQYDVQQDDBZPbmVMb2dpbiBBY2NvdW50IDk3MDg4MB4XDTE2MTEzMDEwNDIwNloXDTIxMTIwMTEwNDIwNlowVjELMAkGA1UEBhMCVVMxDzANBgNVBAoMBndtdGVzdDEVMBMGA1UECwwMT25lTG9naW4gSWRQMR8wHQYDVQQDDBZPbmVMb2dpbiBBY2NvdW50IDk3MDg4MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArmrQOsUG3yVEodaJwLrKYXtdfwwdgLWRBcHt08pUBq66+eKF6gls2WwZBefYRENW7UDxmB57HAwYvQwVFKaNvMCeywPHQU2iunTkZqrO77L9IZNBPWyZ+JjUlj118p0x1z7y7H6RtqjKIjO2D/LNJIduyzYw6gZoD1oDG3nSk/2e1JrwcDn2w/OxbP5511PJNI3FjxHy9fSBoP0Cu6rn1PDIG1mMfcDioEVU2IuPUVE2XHwaTBtkxxK7D2N3FDDRUpPBjT4+TSOCW9eeWXLx8ZVR/uSrhx/+e6uIb9BwwGX5D7h6acy2LwPlExoXMJuBGK+yqrBXby69W2euX/A3vQIDAQABo4HWMIHTMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFIz4Jec1PvEmpaIENWDOZCuwLJ/UMIGTBgNVHSMEgYswgYiAFIz4Jec1PvEmpaIENWDOZCuwLJ/UoVqkWDBWMQswCQYDVQQGEwJVUzEPMA0GA1UECgwGd210ZXN0MRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxHzAdBgNVBAMMFk9uZUxvZ2luIEFjY291bnQgOTcwODiCFCLGJZOwBBDqZVPykk60AGglVmmyMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQUFAAOCAQEAN96m3kB8GPewz88vTm2KPlYGofCK01FY9EdHEhY74R/ZHngrOXJe5ZrfUJh2SAPu/crdWPG+c6nWMbk3i5DORAgMaEsGXaTQgqOSxiw9TOOdDBUtKNCvhf24bS/lHZrwZf5apADq1HymyPQ7xhru+I70SLPo1WlWWequyLKDt1RvEd7DewOtcwBbVo/Rg/Zk4lie7rHzzGJZfJ2n0gcNHtfaBkA2cByWPsLfX77o6VNBlTUCEtdQKamZxXR51Hf/HELOCZBUC8y2RN4dFvOWu+gENaqhXOu88sGI1GzUb8e5hQsBVdnRyUwBLl4ChSQt3VRi9nzuLuqgi4paRrcymA==",
+  "createKeystore" : true,
+  "keyStoreLocation" : "../project/services/securityService/src/saml/",
+  "keyStoreName" : "key-store.jks",
+  "keyStorePassword" : "sample123",
+  "keyAlias" : "sample",
+  "subjectName" : "cn=OneLoginProfiles, OU=WM, O=WM, L=LA, ST=CA, C=US",
+  "entityBaseURL" : "https://www.wavemakeronline.com/studio/services",
+  "roleMappingEnabled" : true,
+  "roleMappingConfig" : {
+    "modelName" : "hrdb",
+    "entityName" : "User",
+    "tableName" : "USER",
+    "usernameField" : "username",
+    "usernameColumn" : "USERNAME",
+    "useRolesQuery" : true,
+    "roleField" : null,
+    "roleColumn" : null,
+    "queryType" : "NATIVE_SQL",
+    "roleQuery" : "SELECT ROLE FROM USER WHERE USERNAME = :LOGGED_IN_USERNAME"
+  }
+}

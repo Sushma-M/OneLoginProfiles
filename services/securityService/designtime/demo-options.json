@@ -1,0 +1,19 @@
+{
+  "users" : [ {
+    "userid" : "user",
+    "password" : "user",
+    "roles" : [ "user" ]
+  }, {
+    "userid" : "admin",
+    "password" : "admin",
+    "roles" : [ "admin" ]
+  }, {
+    "userid" : "tejaswi",
+    "password" : "tejaswi",
+    "roles" : [ "user" ]
+  }, {
+    "userid" : "sai",
+    "password" : "sai",
+    "roles" : [ "admin" ]
+  } ]
+}
